@@ -2,6 +2,12 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f0f0f0;
+    transition: background-color 0.5s;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
 }
 
 .game {
@@ -10,6 +16,11 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     display: inline-block;
+    transition: background-color 0.5s;
+}
+
+.game.dark-mode {
+    background-color: #555;
 }
 
 h1 {
