@@ -15,8 +15,9 @@ function handleCellClick(e) {
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         message.textContent = `Player ${currentPlayer}'s turn`;
 
-        if (checkWin()) {
-            message.textContent = `Player ${currentPlayer === 'X' ? 'O' : 'X'} wins!`;
+        const winner = checkWin();
+        if (winner) {
+            message.textContent = `Player ${winner} wins!`;
         } else if (board.flat().every((cell) => cell !== '')) {
             message.textContent = "It's a draw!";
         }
@@ -24,24 +25,18 @@ function handleCellClick(e) {
 }
 
 function checkWin() {
+    const winningPlayer = board[0][0] || board[1][1] || board[2][2];
     for (let i = 0; i < 3; i++) {
-        // Check rows and columns
-        if (board[i][0] === currentPlayer && board[i][1] === currentPlayer && board[i][2] === currentPlayer) {
-            return true;
-        }
-        if (board[0][i] === currentPlayer && board[1][i] === currentPlayer && board[2][i] === currentPlayer) {
-            return true;
+        if ((board[i][0] && board[i][0] === board[i][1] && board[i][0] === board[i][2]) ||
+            (board[0][i] && board[0][i] === board[1][i] && board[0][i] === board[2][i])) {
+            return board[i][0] || board[0][i];
         }
     }
-
-    // Check diagonals
-    if (board[0][0] === currentPlayer && board[1][1] === currentPlayer && board[2][2] === currentPlayer) {
-        return true;
+    if (winningPlayer && winningPlayer === board[1][1] && 
+        ((winningPlayer === board[0][0] && winningPlayer === board[2][2]) ||
+        (winningPlayer === board[0][2] && winningPlayer === board[2][0]))) {
+        return winningPlayer;
     }
-    if (board[0][2] === currentPlayer && board[1][1] === currentPlayer && board[2][0] === currentPlayer) {
-        return true;
-    }
-
     return false;
 }
 
@@ -51,6 +46,14 @@ function resetGame() {
     currentPlayer = 'X';
     message.textContent = `Player ${currentPlayer}'s turn`;
 }
+
+// Add event listener to switch between light and dark mode
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'l') {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('.game').classList.toggle('dark-mode');
+    }
+});
 
 cells.forEach((cell) => cell.addEventListener('click', handleCellClick));
 resetButton.addEventListener('click', resetGame);
