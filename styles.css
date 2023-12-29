@@ -3,6 +3,7 @@ body {
     text-align: center;
     background-color: #f0f0f0;
     transition: background-color 0.5s;
+    color: #333; /* Dark text color for light mode */
 }
 
 body.dark-mode {
@@ -25,11 +26,13 @@ body.dark-mode {
 
 h1 {
     font-size: 36px;
+    color: #008080; /* Vibrant color */
 }
 
 .message {
     font-size: 24px;
     margin-bottom: 20px;
+    color: #800080; /* Vibrant color */
 }
 
 .board {
@@ -46,6 +49,7 @@ h1 {
     line-height: 100px;
     cursor: pointer;
     background-color: #e0e0e0;
+    transition: background-color 0.5s; /* Smooth color transition */
 }
 
 .cell:hover {
@@ -57,5 +61,11 @@ h1 {
     padding: 10px 20px;
     margin-top: 20px;
     cursor: pointer;
+    background-color: #FF6347; /* Vibrant color */
+    color: #fff; /* Text color */
+    transition: background-color 0.5s; /* Smooth color transition */
 }
 
+.reset-button:hover {
+    background-color: #FF4500; /* Darker shade on hover */
+}
