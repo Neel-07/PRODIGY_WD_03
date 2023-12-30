@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f0f0f0;
+    background-color: #14bdac;
     transition: background-color 0.5s;
     color: #333; /* Dark text color for light mode */
 }
