@@ -64,8 +64,10 @@ h1 {
     background-color: #FF6347; /* Vibrant color */
     color: #fff; /* Text color */
     transition: background-color 0.5s; /* Smooth color transition */
+    border-radius: 10px;
 }
 
 .reset-button:hover {
     background-color: #FF4500; /* Darker shade on hover */
+    border-radius: 10px;
 }
