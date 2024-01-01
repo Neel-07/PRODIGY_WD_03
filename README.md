@@ -22,7 +22,7 @@ This is a simple Tic Tac Toe game built with HTML, CSS, and JavaScript. The game
 - The game ends when one player has three of their markers in a row, column, or diagonal, or when all squares are filled and the game is a draw.
 
 ## Contributing
-Contributions, issues, and feature requests are welcome. Feel free to check [issues page](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/) if you want to contribute.
+Contributions, issues, and feature requests are welcome. Feel free to check [issues page](https://github.com/Neel-07/TIC-TAC-TOE/issues/) if you want to contribute.
 
 ## License
 MIT
