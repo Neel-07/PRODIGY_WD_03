@@ -4,6 +4,11 @@ body {
     background-color: #14bdac;
     transition: background-color 0.5s;
     color: #333; /* Dark text color for light mode */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 body.dark-mode {
