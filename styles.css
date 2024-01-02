@@ -54,7 +54,11 @@ h1 {
     line-height: 100px;
     cursor: pointer;
     background-color: #e0e0e0;
-    transition: background-color 0.5s; /* Smooth color transition */
+    transition: background-color 0.5s, transform 0.5s; /* Add transform to the transition property */
+}
+
+.cell:active { /* This will trigger when the cell is clicked */
+    transform: scale(0.95); /* This will slightly shrink the cell when it's clicked */
 }
 
 .cell:hover {
@@ -68,8 +72,11 @@ h1 {
     cursor: pointer;
     background-color: #FF6347; /* Vibrant color */
     color: #fff; /* Text color */
-    transition: background-color 0.5s; /* Smooth color transition */
-    border-radius: 10px;
+    transition: background-color 0.5s, transform 0.5s; /* Add transform to the transition property */
+}
+
+.reset-button:active { /* This will trigger when the button is clicked */
+    transform: scale(0.95); /* This will slightly shrink the button when it's clicked */
 }
 
 .reset-button:hover {
