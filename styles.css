@@ -73,10 +73,12 @@ h1 {
     background-color: #FF6347; /* Vibrant color */
     color: #fff; /* Text color */
     transition: background-color 0.5s, transform 0.5s; /* Add transform to the transition property */
+    border-radius: 10px;
 }
 
 .reset-button:active { /* This will trigger when the button is clicked */
     transform: scale(0.95); /* This will slightly shrink the button when it's clicked */
+    border-radius: 10px;
 }
 
 .reset-button:hover {
