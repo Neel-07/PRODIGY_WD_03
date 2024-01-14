@@ -4,6 +4,18 @@ const message = document.querySelector('.message');
 const cells = document.querySelectorAll('.cell');
 const resetButton = document.querySelector('.reset-button');
 
+
+
+// Select the checkbox
+const checkbox = document.querySelector('.switch input[type="checkbox"]');
+
+// Listen for a change on the checkbox
+checkbox.addEventListener('change', function() {
+  // Toggle dark mode on and off
+  document.body.classList.toggle('dark-mode');
+});
+
+
 function handleCellClick(e) {
     const cell = e.target;
     const row = +cell.dataset.row;
